@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import authService from '../appwrite/auth';
 import { login as authLogin } from '../store/authSlice';
@@ -8,6 +8,7 @@ import {Button, Input, Logo} from './index';
 
 
 function Login() {
+    console.log("---------------------Login---------------------------")
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { register, handleSubmit } = useForm();

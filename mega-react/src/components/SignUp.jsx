@@ -1,10 +1,9 @@
-import React from 'react'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import authService from '../appwrite/auth';
-import { SignUp as authSignUp, login } from '../store/authSlice';
+import { login } from '../store/authSlice';
 import {Button, Input, Logo} from './index';
 
 function SignUp() {

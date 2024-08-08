@@ -16,7 +16,7 @@ function PostForm({post}) {
     });
 
     const navigate = useNavigate();
-    const userData = useSelector((state) => state.auth.userData)
+    const userData = useSelector((state) => state.userData)
 
     const submit = async (data) => {
         if(post){
@@ -47,7 +47,8 @@ function PostForm({post}) {
 
     const slugTransfrom = useCallback((value)=>{
         if(typeof value == 'string'){
-            return value.trim().toLowerCase().replace(/^[A-Za-Z\d\s]+/g, "-")
+            console.log('value :>> ', value);
+            return value.trim().toLowerCase().replace(/^[a-zA-Z\d\s]+/g, "-")
         }
         return "";
     })

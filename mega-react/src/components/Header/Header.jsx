@@ -4,7 +4,7 @@ import { Container, Logo, LogoutBtn} from "../index"
 import { useSelector } from 'react-redux'
 
 function Header() {
-  const authStatus = useSelector((state)=> state.auth.status)
+  const authStatus = useSelector((state)=> state.status)
   const navigate = useNavigate()
   const navItems = [
     {
